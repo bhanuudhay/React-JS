@@ -120,3 +120,15 @@ similarities :: function name should be capital in both of them
 
 agar kuch return krwa rha ho toh jsx otherwise js is also fine 
 
+In React when ever you return an element end of the day that element is compiled in this manner 
+ 
+ Tree graph 
+ 
+const reactElement = {
+    type : 'a',
+    props : {
+        href : 'google.com',
+        target : '_blank'
+    },
+    children : 'Click me to visit google'
+}
