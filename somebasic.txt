@@ -1,0 +1,70 @@
+// library  : is type of independent object and do not have limitation
+//  framework : is like case senstive and we don't modify on our own
+
+react is a like a java script script library 
+used for making front end
+made by facebook
+solve the problem of ghost messaging 
+
+it has two parts 
+react-dom basically used when you are building website 
+react-native used for mobile app development  + react dom
+
+ways to create react project
+
+npm - node package manager  - it is type of installer that allow you to download libraries
+
+npx - node package executer : if you dont want to install and just want to execute directly you can use npx
+
+npx create-react-app (create-react-app  is a utility) utility is like software (is software ke through ap ek nayaa project bna skta hai )
+
+npx create-react-app project_name 
+
+imp - take care of naming convention otherwise it will take more 
+
+create-react-app : yeh ek bulky utility hai (bahut sari cheeza aaisa deti hai jo apko chahiya nhi)
+
+so inspite of this we use vite and parcel 
+
+they both are utility
+
+entry point for react is : package.json file that contain information about the project 
+
+in package.json there are testing libraries  , scripts and web-vitals (track the performance)
+
+scripts - scripts hi projects ko chalti hai 
+
+start : development environment
+build : production 
+test : test cases run
+eject : app kon react se eject kr deta ho ab aaga koi aur library use krunga 
+
+lintconfig : error aa jata hai app aur improve kar skta ho 
+
+now how to start a project 
+
+npm run start  : to start a project
+
+when  you deploy in production
+
+build folder is share not deploy folder
+
+
+other method to create react project through vite 
+
+npm create vite@latest
+
+all things are similar in package.json
+
+except devDependencies
+
+only use during development phase 
+
+how to run 
+
+go to terminal 
+
+cd project_name
+
+npm  i
+
