@@ -132,3 +132,95 @@ const reactElement = {
     },
     children : 'Click me to visit google'
 }
+
+we can also direct declare function in main.jsx file and then we don't need to import it from anywhere else
+
+har react ek bundeller use krta hai like vite  etc work : behinnd the scene magic krna  syntax ko sudharna 
+and syntax ko convert krna 
+
+react ko html samaj nhi aata isliye jsx use krti hai 
+
+function MyApp()
+{
+  return(
+    <div>
+      <h1> hello chai pi lo</h1>
+    </div>
+  )
+} 
+
+this full above is parsed in js behing the scene 
+
+cosnt MyApp = {
+    type :'h1',
+    props :
+    {
+        there is nothing attribute so no
+    }
+    children : hello chai pi lo
+}
+
+in render part we can directly use function_name() this will also work
+
+
+
+##############IMP###############
+
+const reactElement = {
+    type : 'a',
+    props : {
+        href : 'google.com',
+        target : '_blank'
+    },
+    children : 'Click me to visit google'
+}
+createRoot(document.getElementById('root')).render(
+  reactElement
+)
+
+for this react element we have created custom render but the render in this is controlled by react and whatever key we 
+passing in it is not recognized by the render 
+so this is the main reason its not working 
+
+#################IMP#########
+
+on other hand it will work
+
+const element = (
+  <a href="https://google.com" target = '_blank'> Visit google </a>
+)
+createRoot(document.getElementById('root')).render(
+  element
+)
+
+because in this case we don't have issue of key we are directly passing the tag with attribute 
+in background it automatically get converted 
+
+
+const reactElement = {
+    type : 'a',
+    props : {
+        href : 'google.com',
+        target : '_blank'
+    },
+    children : 'Click me to visit google'
+}
+but if we to execute this we have method in react 
+
+const x = react.createElement('tag',{'attribute'},'content inside the tag')
+
+
+###############IMP FOR INTERVIEW ###########
+
+Hanjo kaisi lagi chai {username}  
+this thing {} is called expression
+evaulated expression
+
+jahan  pe ap js nhi likhta puri but only that part that is evaulated
+
+{if(true)username} // this cannnot be done do this outside 
+
+ab yeh username kaisa inject hota hai jab apka pura ka pura tree ban jata hai toh username last meh inject ho jata hai
+
+{if(true)username} the reason behid this is end of the day it is converted  into object and we know in object conditional is not there
+
