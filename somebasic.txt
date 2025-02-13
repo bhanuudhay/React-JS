@@ -66,5 +66,57 @@ go to terminal
 
 cd project_name
 
-npm  i
+npm  i : node module not available by default so to install it we execute npm i in vite 
+
+node modules ke andar package.json meh jitni bhi dependencies thi woh hoti hai
+
+package-lock.json  : iske ander dependencies lock ho jati hai ki yeh sirf isi version pe chala ga  // stable ver of dependencies is locked here 
+
+manifest.json : used for mobile devices 
+
+important  :  index.html  : yehi to main page jo load hoga isliye isko spa bola jata  hai
+
+SPA :-  Single Page Application 
+
+<noscript> :  agar koi js file execute nhi hai toh yeh hama btata hai 
+
+ReactDom :: DOM ek tree structure hai like in java script eg attribute  , tag ets 
+
+react ka apna ek  khud ka dom hota hai jo virtual dom hota hai 
+
+react give us power of jsx  that we can render our html element 
+
+<React.StrictMode>yeh sirf development ke hai taki ap kuch optimization kar sko 
+
+<App />  : yeh ek function hai jo simply kuch return krta hai 
+
+export default App; //  this syntax is basically  ap ek function lo function ke ander html return krdo  
+aur main us html ko render krwa dunga
+
+java script ke through html likh pa rha hai 
+
+"react-scripts"  :  secretly inject index.js (our javascript file) in our index.html 
+
+jsx : jab aap  components bnata ho
+
+jsx jo hai enclosing tag ke under wrap hona chahiya matlab  ap sirf ek hi element return kar skta ho 
+
+and function name apko capital rakhna padaga for ambiguity like issue 
+
+like return ( <div>  iska under kuch bhi link do </div>)
+
+yeh above problem itni bar repeat ho rhi thi ki iska ek simple solution de diya 
+
+simply return <> anything inside </>
+
+<> </> this thing is called fragment  # IMP # IMP #IMP
+
+while rendering in both vite and react 
+
+diff in react we can use both js and jsx  , jsx is not mandatory 
+but in vite jsx is there as a component
+
+similarities :: function name should be capital in both of them
+
+agar kuch return krwa rha ho toh jsx otherwise js is also fine 
 
