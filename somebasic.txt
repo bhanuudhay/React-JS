@@ -257,3 +257,49 @@ const counter  =  14
 
 basically hook is used ot propogate changes in react
 
+.createRoot 
+
+behind the scene ek dom like structure create krta hai
+
+virtual dom meh  kya hota hai jo jo value ui meh update hui hai sirf woh woh value main dom se compare karka update krta hai
+
+####################################### INTERVIEW IMP IMP IMP ################################################################
+
+react fiber  
+
+reimplemention of react'core algorithmn 
+
+virtual dom ko update krna ke liya react fibre ka use hota hai behind meh
+
+the goal is to increase suistainibility like
+
+react jldi jldi ui update krta hai ek update krna ke during update aa gya aur phir 3rd 
+
+isse acha thoda wait krka final update hi dom meh reflect kru 
+
+another goal 
+
+not traverse whole tree just change where update is done 
+
+#################################
+
+ability to pause , abort  ,  reuse the work when update came in and main ability to assign priority to diff updates 
+
+### hideration  : meaning all web design is ready buton are ready but javascript is not injected 
+jab java script inject kar leta hai us process ko hideration bolta hai 
+
+#### reconcilation 
+
+react ki ek algorithmn hai jo ki reconsider krti hai kisko update krna hai kisko nhi  
+
+while differenciate one tree with another tree konsa part change hona chahiye isi ko  (reconcilation) kehta hai
+
+########################
+reconcilation ek algorithmn jisko sab log behind the scene virtual dom bolta hai 
+
+###########MOST IMP FOR INTERVIEW PERSPECTIVE###################
+
+wht should we use keys in react 
+
+beacause in react fibre ie new algo to improve the performance of list we have to use keys 
+
