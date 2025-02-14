@@ -227,3 +227,33 @@ ab yeh username kaisa inject hota hai jab apka pura ka pura tree ban jata hai to
 
 Hooks in react js 
 
+react have main advantage that is ui updation
+
+ui meh agar update hota hai  toh react kuch method deti hai jinko hooks kehta hai 
+
+hooks ke through data update hoga
+
+ui updatio ke upar pura react ka control hota hai 
+
+// babel  convert jsx  to java script
+
+how to use hooks
+
+simlply hookname()
+
+eg
+
+usestate(can five anything )
+
+
+hooks retun two value in the from of array first one is the var and second value is the method
+
+example
+
+const [counter , setcounter] = usestate(14);
+
+this above is same as  
+const counter  =  14
+
+basically hook is used ot propogate changes in react
+
