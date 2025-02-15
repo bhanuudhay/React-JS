@@ -212,7 +212,7 @@ const x = react.createElement('tag',{'attribute'},'content inside the tag')
 
 ###############IMP FOR INTERVIEW ###########
 
-Hanjo kaisi lagi chai {username}  
+Hanji kaisi lagi chai {username}  
 this thing {} is called expression
 evaulated expression
 
@@ -325,3 +325,48 @@ tailwind  :  utility-first  for css
 
 jsx meh har ek tag closing tag hota hai
 
+##################################props################################
+
+props component ko bnata hai reusable 
+
+example 
+
+in simple html we differenciate things basis  on their code html , css and javascript 
+
+but in react we differenciate them  on the basis of their working nad in react everything in injected or encapsulated or wrapped in one 
+
+in props we can pass object , array , string 
+
+agar app props meh koi value pass nhi kar rha ho  toh || yeh or laga kar directly default kuch dedo
+
+###############################################  INTERVIEW IMP IMP IMP #####################################################
+
+
+
+in counter program if i duplicate setCounter(counter +1)
+like 
+counter  = 19
+
+setCounter(counter +1)
+setCounter(counter +1)
+setCounter(counter +1)
+setCounter(counter +1) 
+
+will it be 23 oor 19 
+
+
+ans is 19
+
+because react fibre jo hai same work ko  batches meh bhejta hai 
+toh woh un sab ko ek h manta hai 
+
+but agar ham krna chahta hai toh 
+
+let [counter , setcounter] = usestate(15);
+
+setcounter( () => {})
+
+yes hama setcounter ke ander ek callback milta hai 
+
+setcounter(counter => counter + 1) 
+ab agar isko char bar likha toh change reflect hoga 

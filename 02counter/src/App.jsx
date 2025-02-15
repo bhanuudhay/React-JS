@@ -18,7 +18,10 @@ function App() {
     console.log("value added" ,  counter);
     //counter = counter + 1
     if(counter < 20)
-    setCounter(counter +1)
+    setCounter(counter => counter +1)    // use state ke setter ke ander callback hota hai 
+    setCounter(counter=>counter +1)  
+    setCounter(counter => counter  +1)  
+
   }
   return (
     <>
