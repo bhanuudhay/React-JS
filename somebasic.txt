@@ -303,3 +303,25 @@ wht should we use keys in react
 
 beacause in react fibre ie new algo to improve the performance of list we have to use keys 
 
+key points 
+
+jruri nhi update aata hi update krdo kuch samay rukhna ,  updates ek sath bhejna yehi fibre krta hai 
+diff  update have diff priority
+
+
+what is fiber 
+
+puase and come back later 
+assign  priority 
+abort previous 
+
+###################################### props in react ###########################################
+
+
+tailwind  :  utility-first  for css
+
+
+ in jsx we use className ispite of class rest functionality same 
+
+jsx meh har ek tag closing tag hota hai
+
