@@ -375,3 +375,5 @@ useCallBack hook
 
 mera pass ek function hai usko jitna ho ska cache memory meh rakho aur  agar main usko dobara se run kru toh
 jitna pass pehle se use ho rha hai aur jo use nhi ho pa rha nhi ho pa rha woh react ki dikkat hai 
+
+readonly matlab koi aakr kuch likh na paya 
