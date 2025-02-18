@@ -370,3 +370,8 @@ yes hama setcounter ke ander ek callback milta hai
 
 setcounter(counter => counter + 1) 
 ab agar isko char bar likha toh change reflect hoga 
+
+useCallBack hook
+
+mera pass ek function hai usko jitna ho ska cache memory meh rakho aur  agar main usko dobara se run kru toh
+jitna pass pehle se use ho rha hai aur jo use nhi ho pa rha nhi ho pa rha woh react ki dikkat hai 
