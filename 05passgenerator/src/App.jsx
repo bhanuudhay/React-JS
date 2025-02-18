@@ -22,22 +22,36 @@ function App() {
 
   return (
     <>
-        <h1 className='text-black text-center text-3xl font-semibold mb-6'>Password Generator</h1>
-    <div className='w-full max-w-md mx-auto rounded-lg p-6 my-8 text-orange-500 bg-gray-800 shadow-lg'>
-      <div className='flex items-center shadow-md rounded-lg overflow-hidden'>
-        <input
-          type="text"
-          value={pass}
-          className='outline-none w-full py-3 px-4 text-white bg-gray-700 placeholder-gray-400 rounded-l-lg'
-          placeholder='Password'
-          readOnly
-        />
-        <button className='outline-none bg-blue-700 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 transition-colors'>
-          Copy
-        </button>
-      </div>
-    </div>
-    <div className='flex  text-sm  gap-x-2'></div>
+        <h1 className='text-black text-center text-3xl font-semibold mb-8'>Password Generator</h1>
+<div className='w-full max-w-md mx-auto rounded-lg p-6 my-8 text-orange-500 bg-gray-800 shadow-xl'>
+  <div className='flex items-center shadow-lg rounded-lg overflow-hidden'>
+    <input
+      type="text"
+      value={pass}
+      className='outline-none w-full py-3 px-4 text-white bg-gray-700 placeholder-gray-400 rounded-l-lg focus:ring-2 focus:ring-blue-500'
+      placeholder='Password'
+      readOnly
+    />
+    <button className='outline-none bg-blue-700 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 transition-all'>
+      Copy
+    </button>
+  </div>
+</div>
+
+<div className='flex text-sm gap-x-3 mt-6'>
+  <div className='flex items-center gap-x-2'>
+    <label htmlFor="length" className='text-white'>Length: {length}</label>
+    <input
+      type="range"
+      id="length"
+      min={6}
+      max={100}
+      value={length}
+      onChange={e => setLength(e.target.value)}
+      className='cursor-pointer w-full bg-gray-600 rounded-lg'
+    />
+  </div>
+</div>
 
     </>
   )
