@@ -1,4 +1,4 @@
-import { useState , useCallback } from 'react'
+import { useState , useCallback, useEffect, useRef } from 'react'
 import './App.css'
 
 
@@ -8,18 +8,30 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
   const [pass , setPass] = useState("")
 
+  //ref hook
+
+  const passref  = useRef()
+
   const passwordGenerator = useCallback(()=>{
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgnhijklmnopqrstuvwxyz"
     if(numAllowed) str+= "0123456789"
     if(charAllowed) str+= "!@#$%^&*()_+"
-    for (let i = 1; i < array.length; i++) {
+    for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1)
-      pass = str.charAt(char)
+      pass += str.charAt(char)
     }
       setPass(pass);
   }, [numAllowed,charAllowed,length,setPass])
 
+  const copyPass = useCallback(()=> {
+    window.navigator.clipboard.writeText(pass);
+  }, [pass])
+
+  useEffect(()=>{
+    passwordGenerator();
+  } ,[length,numAllowed,charAllowed,passwordGenerator])
+  
   return (
     <>
       <h1 className='text-black text-center text-3xl font-semibold mb-8'>Password Generator</h1>
@@ -32,8 +44,9 @@ function App() {
         className='outline-none w-full py-3 px-4 text-white bg-gray-700 placeholder-gray-400 rounded-l-lg focus:ring-2 focus:ring-blue-500'
         placeholder='Password'
         readOnly
+        ref= {passref}
       />
-      <button className='outline-none bg-blue-700 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 transition-all'>
+      <button onClick ={copyPass} className='outline-none bg-blue-700 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 transition-all'>
         Copy
       </button>
     </div>
@@ -53,7 +66,7 @@ function App() {
         defaultChecked= {numAllowed}
         id="numberInput"
         onChange={()=>
-          setNumAllowed((prev) => prev)
+          setNumAllowed((prev) => !prev)
         }
       />
       <label htmlFor='numberInput'>Numbers</label>
@@ -63,7 +76,7 @@ function App() {
         defaultChecked= {charAllowed}
         id="charInput"
         onChange={()=>
-          setCharAllowed((prev) => prev)
+          setCharAllowed((prev) => !prev)
         }
       />
       <label htmlFor='charInput'>Characters</label>

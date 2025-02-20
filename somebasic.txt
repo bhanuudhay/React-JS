@@ -377,3 +377,6 @@ mera pass ek function hai usko jitna ho ska cache memory meh rakho aur  agar mai
 jitna pass pehle se use ho rha hai aur jo use nhi ho pa rha nhi ho pa rha woh react ki dikkat hai 
 
 readonly matlab koi aakr kuch likh na paya 
+
+window.navigator.clipboard.writeText(pass) isse pass clipboard meh copy hota hai 
+
