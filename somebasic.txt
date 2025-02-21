@@ -393,3 +393,56 @@ useref hook kisi bhi element ka reference le skta hai web page pe aur usse use k
 
 can  we create our ncustomn hooks Anwser is yes you can create your custom hooks 
 
+react router dom 
+
+first npm i react-router-dom 
+
+this will install react-router-dom dependency
+
+{Link , NavLink}
+
+Link : we use in react-router-dom in place of anchor tag 
+
+#######in link we wtite to="" in place of href
+
+#######  ####  a tag ham kyu nhi use krta kyunki pura web page refersh hota hai isliye we avoid it in react-router ######## 
+
+phir why we use NavLink
+
+provide additional things 
+
+NavLink meh hamna classname meh function callback use kiya hai kyunki woh hama isActive deta hai 
+
+NavLink apko bta dega ap jis oage pe ho woh acctive hai kya 
+
+url ke under isActive hai matlab ap us page pe active ho  
+
+isActive ? bg-color:300 : bg-color:200;
+
+
+Route provider 
+
+{Outlet} from reatc-router-dom
+
+layout ko as a base use kar lega upar ka aur niche ka woh same rakha ga jaha pa bhi apna outlet de diya waha pe ap chijo ko change kar skta ho
+
+in sab ko run krne kr liya we use 
+
+<RouterProvider router = {router} /> 
+
+const router  = createBrowserRouter([
+  {
+    path: '/',
+    element : <Layout/>,
+    children : [
+      {
+        path : "",
+        element :<Home/>
+      },
+      {
+        path:'about',
+        element : <About />
+      }
+    ]
+  }
+])
