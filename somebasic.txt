@@ -388,4 +388,8 @@ usecallback kya krta hai function ko memorize krta hai jitna ho ska
 useeffect : jab page first time load hota hai aur agar uska badh jo bhi array meh attribute diya hai agar unka sath kuch
 ched chad hui toh page refresh kar dega
 
-useref hook kisi bhi element ka reference le skta hai web page pe aur usse use kar skta ho
+useref hook kisi bhi element ka reference le skta hai web page pe aur usse use kar skta 
+
+
+can  we create our ncustomn hooks Anwser is yes you can create your custom hooks 
+
