@@ -446,3 +446,11 @@ const router  = createBrowserRouter([
     ]
   }
 ])
+
+createRouteFromElements
+
+// ise through bhi ham routes define kar skta hai 
+
+useParams method kya krta hai user/:userid lena meh help krta hai 
+
+loader in router 
